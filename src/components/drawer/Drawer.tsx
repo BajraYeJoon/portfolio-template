@@ -1,24 +1,13 @@
-import * as React from "react";
-
-import { Button } from "@/components/ui/button";
-import {
-  Drawer,
-  DrawerContent,
-
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+import { ArrowUpRight } from "lucide-react";
 
 export default function DrawerComp() {
-
-
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="outline">Open Drawer</Button>
+        <ArrowUpRight />
       </DrawerTrigger>
-      <DrawerContent className="h-[90vh]">
-        test
-      </DrawerContent>
+      <DrawerContent className="h-[90vh]">test</DrawerContent>
     </Drawer>
   );
 }

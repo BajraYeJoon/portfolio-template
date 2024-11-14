@@ -1,12 +1,16 @@
 ---
 import { Fragment } from "astro/jsx-runtime";
-import { ArrowUpRight } from "lucide-astro";
 import DrawerComp from "../drawer/Drawer";
+const { title, description, details } = Astro.props;
 ---
 
 <div class="relative h-full w-full group">
   <div
     class="absolute inset-0 h-full w-full bottom-0 hover-card-bg bg-gradient-to-t from-gray-900 to-transparent rounded-[2.1rem] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  >
+  </div>
+  <div
+    class="absolute inset-0 bg-[url('/project1.webp')] scale-125 bg-cover brightness-75 bg-center transition-transform duration-700 ease-in-out group-hover:scale-110"
   >
   </div>
   <div
@@ -19,8 +23,6 @@ import DrawerComp from "../drawer/Drawer";
     <div
       class="h-8 w-8 border-2 border-foreground/50 hover-card-icon opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-full"
     >
-      <ArrowUpRight />
-
       <DrawerComp client:load />
     </div>
   </div>
